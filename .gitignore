@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.env
+data/chroma/
+data/raw/
+data/interim/
+logs/*.log
+.DS_Store

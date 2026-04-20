@@ -1,0 +1,334 @@
+{
+  "total_records": 304,
+  "total_words": 41788,
+  "by_content_type": {
+    "prose": 207,
+    "faq": 92,
+    "list": 5
+  },
+  "records_per_page": {
+    "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/online-program/": 42,
+    "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/faqs/": 42,
+    "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/": 18,
+    "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/": 18,
+    "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/instructors-staff/": 16,
+    "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/": 15,
+    "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/how-to-apply/": 14,
+    "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/capstone-projects/": 8,
+    "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/tuition-fees-aid/": 6,
+    "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/capstone-project-archive/": 6,
+    "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/our-students/": 6,
+    "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/events-deadlines/": 4,
+    "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/career-outcomes/": 3,
+    "https://datascience.uchicago.edu/people/": 2,
+    "https://datascience.uchicago.edu/people/greg-green/": 1,
+    "https://datascience.uchicago.edu/people/arnab-bose-phd/": 1,
+    "https://datascience.uchicago.edu/people/jose-alvarado/": 1,
+    "https://datascience.uchicago.edu/people/matthew-harris-ridker/": 1,
+    "https://datascience.uchicago.edu/people/patrick-vonesh/": 1,
+    "https://datascience.uchicago.edu/people/nick-kadochnikov/": 1,
+    "https://datascience.uchicago.edu/people/aaron-dinner/": 1,
+    "https://datascience.uchicago.edu/people/aaron-j-elmore/": 1,
+    "https://datascience.uchicago.edu/people/amir-jina/": 1,
+    "https://datascience.uchicago.edu/people/andrew-ferguson/": 1,
+    "https://datascience.uchicago.edu/people/blase-ur/": 1,
+    "https://datascience.uchicago.edu/people/bridget-fahey/": 1,
+    "https://datascience.uchicago.edu/people/chibueze-amanchukwu/": 1,
+    "https://datascience.uchicago.edu/people/christopher-berry/": 1,
+    "https://datascience.uchicago.edu/people/claire-donnat/": 1,
+    "https://datascience.uchicago.edu/people/cong-ma/": 1,
+    "https://datascience.uchicago.edu/people/daniel-sanz-alonso/": 1,
+    "https://datascience.uchicago.edu/people/david-freedman/": 1,
+    "https://datascience.uchicago.edu/people/david-miller/": 1,
+    "https://datascience.uchicago.edu/people/grant-ho/": 1,
+    "https://datascience.uchicago.edu/people/greg-shakhnarovich/": 1,
+    "https://datascience.uchicago.edu/people/hae-kyung-im/": 1,
+    "https://datascience.uchicago.edu/people/ian-foster/": 1,
+    "https://datascience.uchicago.edu/people/isaac-mehlhaff/": 1,
+    "https://datascience.uchicago.edu/people/james-evans/": 1,
+    "https://datascience.uchicago.edu/people/jian-zhou-phd/": 1,
+    "https://datascience.uchicago.edu/people/jiwen-fan/": 1,
+    "https://datascience.uchicago.edu/people/joshua-conrad-jackson/": 1,
+    "https://datascience.uchicago.edu/people/junhong-chen/": 1,
+    "https://datascience.uchicago.edu/people/karen-livescu/": 1,
+    "https://datascience.uchicago.edu/people/kate-keahey/": 1,
+    "https://datascience.uchicago.edu/people/kyle-chard/": 1,
+    "https://datascience.uchicago.edu/people/lorenzo-orecchia/": 1,
+    "https://datascience.uchicago.edu/people/luc-anselin/": 1,
+    "https://datascience.uchicago.edu/people/luis-m-a-bettencourt/": 1,
+    "https://datascience.uchicago.edu/people/marc-berman/": 1,
+    "https://datascience.uchicago.edu/people/mark-hendricks/": 1,
+    "https://datascience.uchicago.edu/people/marshini-chetty/": 1,
+    "https://datascience.uchicago.edu/people/maryellen-giger/": 1,
+    "https://datascience.uchicago.edu/people/matthew-stephens/": 1,
+    "https://datascience.uchicago.edu/people/mentor-anjali-adukia-2/": 1,
+    "https://datascience.uchicago.edu/people/molly-offer-westort/": 1,
+    "https://datascience.uchicago.edu/people/nati-srebro/": 1,
+    "https://datascience.uchicago.edu/people/pedram-hassanzadeh/": 1,
+    "https://datascience.uchicago.edu/people/rana-hanocka/": 1,
+    "https://datascience.uchicago.edu/people/raul-castro-fernandez/": 1,
+    "https://datascience.uchicago.edu/people/rina-foygel-barber/": 1,
+    "https://datascience.uchicago.edu/people/risi-kondor/": 1,
+    "https://datascience.uchicago.edu/people/robert-grossman/": 1,
+    "https://datascience.uchicago.edu/people/samantha-riesenfeld/": 1,
+    "https://datascience.uchicago.edu/people/samuel-l-volchenboum/": 1,
+    "https://datascience.uchicago.edu/people/sanjay-krishnan/": 1,
+    "https://datascience.uchicago.edu/people/tiffany-shaw/": 1,
+    "https://datascience.uchicago.edu/people/veronika-rockova/": 1,
+    "https://datascience.uchicago.edu/people/vincenzo-vitelli/": 1,
+    "https://datascience.uchicago.edu/people/yuan-chang-leong/": 1,
+    "https://datascience.uchicago.edu/people/yuehaw-khoo/": 1,
+    "https://datascience.uchicago.edu/people/yuxin-chen/": 1,
+    "https://datascience.uchicago.edu/people/alison-ossyra/": 1,
+    "https://datascience.uchicago.edu/people/anil-d-chaturvedi-phd/": 1,
+    "https://datascience.uchicago.edu/people/ashish-pujari/": 1,
+    "https://datascience.uchicago.edu/people/batu-gundogdu-phd/": 1,
+    "https://datascience.uchicago.edu/people/ben-wiebers/": 1,
+    "https://datascience.uchicago.edu/people/briana-allen/": 1,
+    "https://datascience.uchicago.edu/people/daniel-truesdale/": 1,
+    "https://datascience.uchicago.edu/people/danny-ng-phd/": 1,
+    "https://datascience.uchicago.edu/people/dmitri-sidorov/": 1,
+    "https://datascience.uchicago.edu/people/donald-patchell-mse-mba/": 1,
+    "https://datascience.uchicago.edu/people/dujuan-smith/": 1,
+    "https://datascience.uchicago.edu/people/emma-kerr/": 1,
+    "https://datascience.uchicago.edu/people/fan-yang-phd/": 1,
+    "https://datascience.uchicago.edu/people/fouad-bousetouane-phd/": 1,
+    "https://datascience.uchicago.edu/people/francisco-azeredo-phd/": 1,
+    "https://datascience.uchicago.edu/people/gizem-agar-phd/": 1,
+    "https://datascience.uchicago.edu/people/henry-igunbor/": 1,
+    "https://datascience.uchicago.edu/people/ignas-grabauskas/": 1,
+    "https://datascience.uchicago.edu/people/igor-yakushin-phd/": 1,
+    "https://datascience.uchicago.edu/people/jeanette-shutay-phd/": 1,
+    "https://datascience.uchicago.edu/people/jennifer-wei-mem/": 1,
+    "https://datascience.uchicago.edu/people/jenny-schmidt/": 1,
+    "https://datascience.uchicago.edu/people/jeong-yoon-lee-phd/": 1,
+    "https://datascience.uchicago.edu/people/john-navarro/": 1,
+    "https://datascience.uchicago.edu/people/jonathan-williams-ms/": 1,
+    "https://datascience.uchicago.edu/people/josie-badillo-sittig/": 1,
+    "https://datascience.uchicago.edu/people/justin-kurland-phd/": 1,
+    "https://datascience.uchicago.edu/people/kendall-cox/": 1,
+    "https://datascience.uchicago.edu/people/lauren-isaacman-darga/": 1,
+    "https://datascience.uchicago.edu/people/lauren-milewski-msed/": 1,
+    "https://datascience.uchicago.edu/people/mike-anderson/": 1,
+    "https://datascience.uchicago.edu/people/ming-long-lam-phd/": 1,
+    "https://datascience.uchicago.edu/people/nick-diantonio-m-ed/": 1,
+    "https://datascience.uchicago.edu/people/roger-moore-mba/": 1,
+    "https://datascience.uchicago.edu/people/samantha-kruse/": 1,
+    "https://datascience.uchicago.edu/people/samantha-widemon/": 1,
+    "https://datascience.uchicago.edu/people/sanjay-boddhu-phd/": 1,
+    "https://datascience.uchicago.edu/people/sebastien-donadio-phd/": 1,
+    "https://datascience.uchicago.edu/people/shaddy-abado-phd-2/": 1,
+    "https://datascience.uchicago.edu/people/shahbaz-chaudhary-ma/": 1,
+    "https://datascience.uchicago.edu/people/shree-bharadwaj-ms/": 1,
+    "https://datascience.uchicago.edu/people/stephen-barry/": 1,
+    "https://datascience.uchicago.edu/people/taylor-alexander/": 1,
+    "https://datascience.uchicago.edu/people/taylor-wallace/": 1,
+    "https://datascience.uchicago.edu/people/utku-pamuksuz-phd/": 1,
+    "https://datascience.uchicago.edu/people/zach-brown/": 1
+  },
+  "dropped_boilerplate_count": 27,
+  "dropped_boilerplate_sample": [
+    {
+      "url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/",
+      "section_title": "Time Series Analysis and Forecasting",
+      "reason": "boilerplate",
+      "appears_on": [
+        "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/",
+        "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/",
+        "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/online-program/"
+      ]
+    },
+    {
+      "url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/",
+      "section_title": "Statistical Models for Data Science",
+      "reason": "boilerplate",
+      "appears_on": [
+        "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/",
+        "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/",
+        "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/online-program/"
+      ]
+    },
+    {
+      "url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/",
+      "section_title": "Machine Learning I",
+      "reason": "boilerplate",
+      "appears_on": [
+        "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/",
+        "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/",
+        "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/online-program/"
+      ]
+    },
+    {
+      "url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/",
+      "section_title": "Machine Learning II",
+      "reason": "boilerplate",
+      "appears_on": [
+        "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/",
+        "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/",
+        "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/online-program/"
+      ]
+    },
+    {
+      "url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/",
+      "section_title": "Data Engineering Platforms for Analytics or Big Data and Cloud Computing",
+      "reason": "boilerplate",
+      "appears_on": [
+        "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/",
+        "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/",
+        "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/online-program/"
+      ]
+    },
+    {
+      "url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/",
+      "section_title": "Data Science Capstone Project",
+      "reason": "boilerplate",
+      "appears_on": [
+        "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/",
+        "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/",
+        "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/online-program/"
+      ]
+    },
+    {
+      "url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/",
+      "section_title": "Statistical Models for Data Science Letter Grade",
+      "reason": "boilerplate",
+      "appears_on": [
+        "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/",
+        "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/",
+        "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/online-program/"
+      ]
+    },
+    {
+      "url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/",
+      "section_title": "Data Engineering Platforms for Analytics or Big Data and Cloud Computing Letter Grade",
+      "reason": "boilerplate",
+      "appears_on": [
+        "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/",
+        "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/",
+        "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/online-program/"
+      ]
+    },
+    {
+      "url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/",
+      "section_title": "Machine Learning I Letter Grade",
+      "reason": "boilerplate",
+      "appears_on": [
+        "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/",
+        "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/",
+        "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/online-program/"
+      ]
+    },
+    {
+      "url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/",
+      "section_title": "Time Series Analysis and Forecasting Letter Grade",
+      "reason": "boilerplate",
+      "appears_on": [
+        "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/",
+        "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/",
+        "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/online-program/"
+      ]
+    }
+  ],
+  "near_duplicates_merged": [
+    {
+      "kept_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/online-program/",
+      "dropped_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/",
+      "section_title": "Career Seminar (Seminar, required)"
+    },
+    {
+      "kept_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/online-program/",
+      "dropped_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/",
+      "section_title": "Leadership and Consulting for Data Science"
+    },
+    {
+      "kept_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/online-program/",
+      "dropped_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/",
+      "section_title": "Advanced Computer Vision with Deep Learning"
+    },
+    {
+      "kept_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/online-program/",
+      "dropped_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/",
+      "section_title": "Advanced Machine Learning and Artificial Intelligence"
+    },
+    {
+      "kept_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/online-program/",
+      "dropped_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/",
+      "section_title": "Bayesian Machine Learning with Generative AI Applications"
+    },
+    {
+      "kept_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/online-program/",
+      "dropped_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/",
+      "section_title": "Data Science for Algorithmic Marketing"
+    },
+    {
+      "kept_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/online-program/",
+      "dropped_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/",
+      "section_title": "Data Science for Healthcare"
+    },
+    {
+      "kept_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/online-program/",
+      "dropped_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/",
+      "section_title": "Data Visualization Techniques"
+    },
+    {
+      "kept_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/online-program/",
+      "dropped_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/",
+      "section_title": "Digital Marketing Analytics in Theory and Practice"
+    },
+    {
+      "kept_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/online-program/",
+      "dropped_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/",
+      "section_title": "Deep Reinforcement Learning"
+    },
+    {
+      "kept_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/online-program/",
+      "dropped_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/",
+      "section_title": "Generative AI: Principles and Applications"
+    },
+    {
+      "kept_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/online-program/",
+      "dropped_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/",
+      "section_title": "Machine Learning Operations"
+    },
+    {
+      "kept_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/online-program/",
+      "dropped_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/",
+      "section_title": "Next-Gen NLP: LLM and Agentic AI in Practice"
+    },
+    {
+      "kept_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/online-program/",
+      "dropped_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/",
+      "section_title": "Quantitative Finance: Methods and Applications"
+    },
+    {
+      "kept_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/online-program/",
+      "dropped_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/",
+      "section_title": "Real Time Intelligent Systems"
+    },
+    {
+      "kept_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/online-program/",
+      "dropped_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/in-person-program/",
+      "section_title": "Supply Chain Optimization"
+    },
+    {
+      "kept_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/",
+      "dropped_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/",
+      "section_title": "Introduction to Statistical Concepts (Foundational) Optional"
+    },
+    {
+      "kept_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/",
+      "dropped_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/",
+      "section_title": "Introduction to Statistical Concepts (Foundational) Optional"
+    },
+    {
+      "kept_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/",
+      "dropped_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/",
+      "section_title": "R for Data Science (Foundational) Optional"
+    },
+    {
+      "kept_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/",
+      "dropped_url": "https://datascience.uchicago.edu/education/masters-programs/ms-in-applied-data-science/course-progressions/",
+      "section_title": "R for Data Science (Foundational) Optional"
+    }
+  ]
+}
