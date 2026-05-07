@@ -6,7 +6,11 @@ import uuid
 
 import streamlit as st
 
-from rag.chain import build_rag_chain, build_retrieval_chain, _chat_llm
+from rag.chain import (
+    _chat_llm,
+    answer_with_history,
+    build_history_aware_retrieval_chain,
+)
 from rag.index import build_or_load_vectorstore
 
 
@@ -27,12 +31,19 @@ _CSS = """
     --uchi-maroon-dark: #5a0000;
     --uchi-gold: #d6a756;
     --bg: #ffffff;
+    --bg-rgb: 255, 255, 255;
     --sidebar-bg: #f7f5f3;
     --border: #e5e0de;
     --border-soft: #efebe9;
     --text: #1f1f1f;
     --muted: #6b6b6b;
     --user-bubble: #f1ebe8;
+    --surface: #ffffff;
+    --surface-hover: #fcfaf9;
+    --surface-alt: #ece5e1;
+    --surface-active: #ece0da;
+    --expander-bg: #fcfaf9;
+    --snippet-text: #333333;
 }
 
 html, body, [data-testid="stAppViewContainer"] {
@@ -130,12 +141,12 @@ img[data-testid="stLogo"],
     margin: 0 !important;
 }
 [data-testid="stSidebar"] button[kind="secondary"]:hover {
-    background: #ece5e1 !important;
+    background: var(--surface-alt) !important;
     color: var(--uchi-maroon) !important;
 }
 [data-testid="stSidebar"] button[kind="secondary"][data-active="true"],
 [data-testid="stSidebar"] button[kind="tertiary"] {
-    background: #ece0da !important;
+    background: var(--surface-active) !important;
     color: var(--uchi-maroon) !important;
     font-weight: 500 !important;
 }
@@ -173,7 +184,7 @@ img[data-testid="stLogo"],
 
 /* Suggested-prompt cards (secondary buttons in main area) */
 .main div[data-testid="stButton"] > button {
-    background: #ffffff;
+    background: var(--surface);
     color: var(--text);
     border: 1px solid var(--border);
     border-radius: 12px;
@@ -191,7 +202,7 @@ img[data-testid="stLogo"],
 .main div[data-testid="stButton"] > button:hover {
     border-color: var(--uchi-maroon);
     color: var(--uchi-maroon);
-    background: #fcfaf9;
+    background: var(--surface-hover);
 }
 
 /* Chat messages — remove default container chrome */
@@ -244,7 +255,7 @@ img[data-testid="stLogo"],
     outline: none !important;
 }
 [data-testid="stBottom"] {
-    background: linear-gradient(to top, var(--bg) 75%, rgba(255,255,255,0)) !important;
+    background: linear-gradient(to top, var(--bg) 75%, rgba(var(--bg-rgb), 0)) !important;
 }
 [data-testid="stChatInput"] {
     max-width: 820px;
@@ -257,7 +268,8 @@ img[data-testid="stLogo"],
     padding: 0.95rem 1.2rem !important;
     font-family: 'Inter', sans-serif !important;
     font-size: 0.95rem !important;
-    background: #ffffff !important;
+    background: var(--surface) !important;
+    color: var(--text) !important;
     box-shadow: 0 2px 10px rgba(0,0,0,0.04) !important;
 }
 [data-testid="stChatInput"] textarea:focus {
@@ -269,7 +281,7 @@ img[data-testid="stLogo"],
 details[data-testid="stExpander"] {
     border: 1px solid var(--border);
     border-radius: 10px;
-    background: #fcfaf9;
+    background: var(--expander-bg);
     margin-top: 0.6rem;
 }
 details[data-testid="stExpander"] summary {
@@ -281,7 +293,7 @@ details[data-testid="stExpander"] summary {
 
 /* Source cards inside the expander */
 .source-card {
-    background: #ffffff;
+    background: var(--surface);
     border-left: 3px solid var(--uchi-maroon);
     padding: 0.75rem 1rem;
     margin: 0.4rem 0;
@@ -302,7 +314,7 @@ details[data-testid="stExpander"] summary {
     font-style: italic;
 }
 .source-card .snippet {
-    color: #333;
+    color: var(--snippet-text);
     font-size: 0.88rem;
     line-height: 1.55;
     margin-bottom: 0.4rem;
@@ -318,6 +330,52 @@ details[data-testid="stExpander"] summary {
 /* Hide the default "Press Enter to send" helper and Streamlit footer */
 [data-testid="stStatusWidget"] { display: none; }
 footer { visibility: hidden; }
+
+/* ============ DARK MODE ============
+   Triggers:
+     1. OS-level dark preference (covers Streamlit's "auto" theme).
+     2. Streamlit's explicit Dark theme, which tags an ancestor with data-theme="dark".
+   Maroon is brightened (#cf4747) so it has enough contrast on the dark canvas. */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --uchi-maroon: #cf4747;
+        --uchi-maroon-dark: #a83838;
+        --bg: #0f1115;
+        --bg-rgb: 15, 17, 21;
+        --sidebar-bg: #161922;
+        --border: #2a2e38;
+        --border-soft: #1f2330;
+        --text: #e8e6e3;
+        --muted: #9a978f;
+        --user-bubble: #2a2531;
+        --surface: #1a1d24;
+        --surface-hover: #22252e;
+        --surface-alt: #1e222b;
+        --surface-active: #2a2530;
+        --expander-bg: #161922;
+        --snippet-text: #cfccc6;
+    }
+}
+html[data-theme="dark"],
+[data-theme="dark"],
+.stApp[data-theme="dark"] {
+    --uchi-maroon: #cf4747;
+    --uchi-maroon-dark: #a83838;
+    --bg: #0f1115;
+    --bg-rgb: 15, 17, 21;
+    --sidebar-bg: #161922;
+    --border: #2a2e38;
+    --border-soft: #1f2330;
+    --text: #e8e6e3;
+    --muted: #9a978f;
+    --user-bubble: #2a2531;
+    --surface: #1a1d24;
+    --surface-hover: #22252e;
+    --surface-alt: #1e222b;
+    --surface-active: #2a2530;
+    --expander-bg: #161922;
+    --snippet-text: #cfccc6;
+}
 </style>
 """
 
@@ -335,28 +393,25 @@ def _load_chains():
     vectorstore = build_or_load_vectorstore()
     llm = _chat_llm()
     return {
-        "retrieval_chain": build_retrieval_chain(vectorstore, llm),
-        "rag_chain": build_rag_chain(vectorstore, llm),
+        "llm": llm,
+        "retrieval_chain": build_history_aware_retrieval_chain(vectorstore, llm),
     }
 
 
 def _render_sources(docs) -> None:
-    seen: set[str] = set()
-    for d in docs:
+    # Sources are already deduped and ordered by the chain, so the index here
+    # matches the [N] citation numbers in the answer text.
+    for i, d in enumerate(docs, start=1):
         url = d.metadata.get("url", "") or ""
         title = d.metadata.get("page_title", "") or "Untitled"
         section = d.metadata.get("section_title", "") or ""
-        key = f"{url}|{section}"
-        if key in seen:
-            continue
-        seen.add(key)
 
         snippet = (d.page_content or "").strip()
         if len(snippet) > 320:
             snippet = snippet[:320].rsplit(" ", 1)[0] + "…"
 
         parts = ['<div class="source-card">']
-        parts.append(f'<div class="title">{html.escape(title)}</div>')
+        parts.append(f'<div class="title">[{i}] {html.escape(title)}</div>')
         if section:
             parts.append(f'<div class="section">{html.escape(section)}</div>')
         if snippet:
@@ -377,10 +432,19 @@ def _render_message(msg: dict) -> None:
                 _render_sources(msg["sources"])
 
 
-def _answer(query: str, chains) -> dict:
-    retrieved = chains["retrieval_chain"].invoke({"question": query})[:5]
-    answer = chains["rag_chain"].invoke({"question": query})
-    return {"role": "assistant", "content": answer, "sources": retrieved}
+def _history_for_chain(messages: list[dict]) -> list[dict]:
+    """Strip non-essential fields before sending to the condense chain."""
+    return [{"role": m["role"], "content": m.get("content", "")} for m in messages]
+
+
+def _answer(query: str, chains, history: list[dict]) -> dict:
+    result = answer_with_history(
+        query,
+        chat_history=_history_for_chain(history),
+        llm=chains["llm"],
+        retrieval_chain=chains["retrieval_chain"],
+    )
+    return {"role": "assistant", "content": result["answer"], "sources": result["sources"]}
 
 
 # ================== RENDER ==================
@@ -495,9 +559,11 @@ if st.session_state.pending_query:
     q = st.session_state.pending_query
     st.session_state.pending_query = None
     target_chat = current  # lock to the chat that owned the submission
+    # Prior turns = everything in this chat *except* the user message we're about to answer.
+    prior_history = target_chat["messages"][:-1]
     with st.chat_message("assistant", avatar=":material/school:"):
         with st.spinner("Thinking…"):
-            reply = _answer(q, chains)
+            reply = _answer(q, chains, prior_history)
         st.markdown(reply["content"])
         if reply["sources"]:
             with st.expander(f"Sources ({len(reply['sources'])})"):
