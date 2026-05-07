@@ -27,27 +27,31 @@ _CSS = """
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Serif+Pro:wght@400;600&family=Inter:wght@400;500;600&display=swap');
 
 :root {
+    /* Brand Colors (Keep these static) */
     --uchi-maroon: #800000;
     --uchi-maroon-dark: #5a0000;
     --uchi-gold: #d6a756;
-    --bg: #ffffff;
-    --bg-rgb: 255, 255, 255;
-    --sidebar-bg: #f7f5f3;
-    --border: #e5e0de;
-    --border-soft: #efebe9;
-    --text: #1f1f1f;
-    --muted: #6b6b6b;
-    --user-bubble: #f1ebe8;
-    --surface: #ffffff;
-    --surface-hover: #fcfaf9;
-    --surface-alt: #ece5e1;
-    --surface-active: #ece0da;
-    --expander-bg: #fcfaf9;
-    --snippet-text: #333333;
+
+    /* Map Structural Colors to Streamlit's Native Engine */
+    --bg: var(--background-color);
+    --sidebar-bg: var(--secondary-background-color);
+    --text: var(--text-color);
+
+    /* Semi-transparent overlays seamlessly adapt to Light/Dark backgrounds */
+    --border: rgba(130, 130, 130, 0.25);
+    --border-soft: rgba(130, 130, 130, 0.1);
+    --muted: rgba(130, 130, 130, 0.7);
+    --user-bubble: rgba(130, 130, 130, 0.1);
+    --surface: var(--background-color);
+    --surface-hover: rgba(130, 130, 130, 0.05);
+    --surface-alt: rgba(130, 130, 130, 0.08);
+    --surface-active: rgba(128, 0, 0, 0.1);
+    --expander-bg: var(--secondary-background-color);
+    --snippet-text: var(--text-color);
 }
 
 html, body, [data-testid="stAppViewContainer"] {
-    background: var(--bg) !important;
+    background: var(--bg);
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     color: var(--text);
 }
@@ -102,7 +106,7 @@ img[data-testid="stLogo"],
     padding: 0.45rem 0.65rem;
 }
 
-/* "New chat" button (primary) — filled maroon */
+/* "New chat" button (primary) */
 [data-testid="stSidebar"] button[kind="primary"] {
     background: var(--uchi-maroon) !important;
     color: white !important;
@@ -116,7 +120,7 @@ img[data-testid="stLogo"],
     background: var(--uchi-maroon-dark) !important;
 }
 
-/* History buttons (secondary) — ghost, left-aligned, truncated */
+/* History buttons (secondary) */
 [data-testid="stSidebar"] button[kind="secondary"] {
     background: transparent !important;
     color: var(--text) !important;
@@ -158,7 +162,6 @@ img[data-testid="stLogo"],
     padding-bottom: 7rem;
 }
 
-/* Empty state */
 .empty-state {
     text-align: center;
     margin-top: 10vh;
@@ -182,7 +185,7 @@ img[data-testid="stLogo"],
     margin: 0;
 }
 
-/* Suggested-prompt cards (secondary buttons in main area) */
+/* Suggested-prompt cards */
 .main div[data-testid="stButton"] > button {
     background: var(--surface);
     color: var(--text);
@@ -205,7 +208,7 @@ img[data-testid="stLogo"],
     background: var(--surface-hover);
 }
 
-/* Chat messages — remove default container chrome */
+/* Chat messages */
 [data-testid="stChatMessage"] {
     background: transparent !important;
     border: none !important;
@@ -214,7 +217,7 @@ img[data-testid="stLogo"],
     gap: 0.75rem;
 }
 
-/* User turn: right-aligned bubble */
+/* User turn */
 [data-testid="stChatMessage"]:has([data-testid="chatAvatarIcon-user"]) {
     flex-direction: row-reverse;
 }
@@ -229,7 +232,7 @@ img[data-testid="stLogo"],
     display: none;
 }
 
-/* Assistant turn: no bubble, full width */
+/* Assistant turn */
 [data-testid="stChatMessage"]:has([data-testid="chatAvatarIcon-assistant"]) [data-testid="stChatMessageContent"] {
     padding: 0.3rem 0 0.3rem 0.2rem;
     line-height: 1.6;
@@ -239,7 +242,7 @@ img[data-testid="stLogo"],
     color: white !important;
 }
 
-/* Sticky chat input at bottom — strip all wrapper chrome, style only the pill */
+/* Sticky chat input at bottom */
 [data-testid="stBottom"],
 [data-testid="stBottomBlockContainer"],
 [data-testid="stChatInput"],
@@ -255,7 +258,7 @@ img[data-testid="stLogo"],
     outline: none !important;
 }
 [data-testid="stBottom"] {
-    background: linear-gradient(to top, var(--bg) 75%, rgba(var(--bg-rgb), 0)) !important;
+    background: linear-gradient(to top, var(--bg) 80%, transparent) !important;
 }
 [data-testid="stChatInput"] {
     max-width: 820px;
@@ -291,7 +294,6 @@ details[data-testid="stExpander"] summary {
     font-size: 0.88rem;
 }
 
-/* Source cards inside the expander */
 .source-card {
     background: var(--surface);
     border-left: 3px solid var(--uchi-maroon);
@@ -327,54 +329,18 @@ details[data-testid="stExpander"] summary {
 }
 .source-card a:hover { text-decoration: underline; }
 
-/* Hide the default "Press Enter to send" helper and Streamlit footer */
 [data-testid="stStatusWidget"] { display: none; }
 footer { visibility: hidden; }
 
-/* ============ DARK MODE ============
-   Triggers:
-     1. OS-level dark preference (covers Streamlit's "auto" theme).
-     2. Streamlit's explicit Dark theme, which tags an ancestor with data-theme="dark".
-   Maroon is brightened (#cf4747) so it has enough contrast on the dark canvas. */
+/* ============ DARK MODE ADJUSTMENTS ============
+   We only need this media query to slightly brighten the maroon
+   accents so they are legible when the dark mode is active. */
 @media (prefers-color-scheme: dark) {
     :root {
         --uchi-maroon: #cf4747;
         --uchi-maroon-dark: #a83838;
-        --bg: #0f1115;
-        --bg-rgb: 15, 17, 21;
-        --sidebar-bg: #161922;
-        --border: #2a2e38;
-        --border-soft: #1f2330;
-        --text: #e8e6e3;
-        --muted: #9a978f;
-        --user-bubble: #2a2531;
-        --surface: #1a1d24;
-        --surface-hover: #22252e;
-        --surface-alt: #1e222b;
-        --surface-active: #2a2530;
-        --expander-bg: #161922;
-        --snippet-text: #cfccc6;
+        --surface-active: rgba(207, 71, 71, 0.2);
     }
-}
-html[data-theme="dark"],
-[data-theme="dark"],
-.stApp[data-theme="dark"] {
-    --uchi-maroon: #cf4747;
-    --uchi-maroon-dark: #a83838;
-    --bg: #0f1115;
-    --bg-rgb: 15, 17, 21;
-    --sidebar-bg: #161922;
-    --border: #2a2e38;
-    --border-soft: #1f2330;
-    --text: #e8e6e3;
-    --muted: #9a978f;
-    --user-bubble: #2a2531;
-    --surface: #1a1d24;
-    --surface-hover: #22252e;
-    --surface-alt: #1e222b;
-    --surface-active: #2a2530;
-    --expander-bg: #161922;
-    --snippet-text: #cfccc6;
 }
 </style>
 """
